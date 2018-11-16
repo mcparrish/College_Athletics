@@ -1,0 +1,15 @@
+response.xpath("//tbody//tr[1]//td[1]/b/text()")
+response.xpath("//tbody//tr[2]//td[1]::text")
+response.xpath("//tbody//tr[1]//td[1]/text()").extract_first
+response.xpath("//tbody//tr[1]//td[1]/text()")
+response.xpath("//tbody//tr[2]//td[1]::text")
+response.xpath("//tbody//tr[2]/td[1]/text()").extract_first
+response.xpath("//tbody//tr[2]//td[1]/form[@id]")
+response.xpath("//tr/td/form/input[@name='coachId']/@value")
+
+
+
+coachid: response.xpath("//form/input[@id='coachId']/@value")
+sport_code: response.xpath("//form/input[@id='sportCode']/@value")
+name: response.xpath("//form/a/text()")
+dates: response.xpath("//tbody/tr/td[2]/text()").extract_first()
